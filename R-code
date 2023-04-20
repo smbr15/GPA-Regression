@@ -1,0 +1,13 @@
+setwd('C:/Users/sabri/OneDrive/Documents/UTH SBMI')
+
+admit=c(binary$admit)
+gpa=c(binary$gpa)
+boxplot(gpa~admit,data=binary)
+
+model=glm(admit~gpa,data=binary,family=binomial)
+model
+summary(model)
+
+gre=c(binary$gre)
+model2=glm(admit~gpa+gre,family=binomial)
+summary(model2)
