@@ -1,14 +1,20 @@
+#Setting working directory with binary.csv file
 setwd('C:/Users/sabri/OneDrive/Documents/UTH SBMI')
 
+#Reading binary.csv file as binary variable
 binary=read.csv(file='binary.csv',header=T,sep=',')
+
+#Quick boxplot to summarize data
 admit=c(binary$admit)
 gpa=c(binary$gpa)
 boxplot(gpa~admit,data=binary)
 
+#First logistic regression using GPA as a predictor of college admittance
 model=glm(admit~gpa,data=binary,family=binomial)
 model
 summary(model)
 
+#Second logistic regression using both GPA and GRE as predictors of college admittance
 gre=c(binary$gre)
 model2=glm(admit~gpa+gre,family=binomial)
 summary(model2)
