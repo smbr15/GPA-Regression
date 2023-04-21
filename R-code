@@ -1,5 +1,6 @@
 setwd('C:/Users/sabri/OneDrive/Documents/UTH SBMI')
 
+binary=read.csv(file='binary.csv',header=T,sep=',')
 admit=c(binary$admit)
 gpa=c(binary$gpa)
 boxplot(gpa~admit,data=binary)
