@@ -1,2 +1,4 @@
 # GPA-Regression
-Using R, this short project includes a logistic regression of GPAas a predictor for college admittance from a canned data set. 
+Using R, this short project includes two logistic regressions from canned data: 
+  1.) Uses GPA as a predictor for college admittance 
+  2.) Uses GPA and GRE as predictors for college admittance
